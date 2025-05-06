@@ -4,6 +4,7 @@ import com.skypro.exam.model.Question;
 import java.util.Collection;
 import java.util.Random;
 
+
 public interface QuestionService {
 
     Question add(String question, String answer);
