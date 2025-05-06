@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 
+
 @RestController
 @RequestMapping("/java")
 public class JavaQuestionController {
