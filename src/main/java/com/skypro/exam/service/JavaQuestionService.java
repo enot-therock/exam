@@ -15,12 +15,6 @@ public class JavaQuestionService implements QuestionService{
         this.createJava();
     }
 
-//    public JavaQuestionService() {
-//        super();
-//        this.questions = questions;
-//        this.createJava();
-//    }
-
     public void createJava() {
         Question string = new Question("String", "Class string ...");
         Question memory = new Question("Memory", "Memory is ...");
