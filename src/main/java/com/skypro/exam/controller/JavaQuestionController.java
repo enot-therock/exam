@@ -11,6 +11,7 @@ import java.util.Collection;
 @RequestMapping("/java")
 public class JavaQuestionController {
 
+
     private final JavaQuestionService javaQuestionService;
 
     public JavaQuestionController(JavaQuestionService javaQuestionService) {
