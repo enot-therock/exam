@@ -20,7 +20,7 @@ public class ExamController {
     }
 
     @GetMapping("/get")
-    public Collection<Question> getQuestions(@RequestParam("amount") int amount) {
+    public Collection<Question> getQuestions(@RequestParam(name = "amount") int amount) {
         return examinerServiceImpl.getQuestions(amount);
     }
 }
