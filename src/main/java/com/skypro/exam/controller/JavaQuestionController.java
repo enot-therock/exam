@@ -5,12 +5,13 @@ import com.skypro.exam.service.JavaQuestionService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 
 @RestController
 @RequestMapping("/java")
 public class JavaQuestionController {
-
 
     private final JavaQuestionService javaQuestionService;
 
@@ -24,14 +25,14 @@ public class JavaQuestionController {
         return "Вопрос по Java добавлен";
     }
 
-    @GetMapping("/java")
-    public Collection<Question> getQuestions() {
+    @GetMapping("/all")
+    public Set<Question> getQuestions() {
         return javaQuestionService.getAll();
     }
 
     @GetMapping("/remove")
-    public String removeQuestion(@RequestParam (name = "question") Question question) {
-        javaQuestionService.remove(question);
+    public String removeQuestion(@RequestParam (name = "question") String question, @RequestParam (name = "answer") String answer) {
+        javaQuestionService.remove(question, answer);
         return "Вопрос " + question + " удален";
     }
 }
