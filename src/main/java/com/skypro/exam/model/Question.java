@@ -3,6 +3,7 @@ package com.skypro.exam.model;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Getter
 @EqualsAndHashCode

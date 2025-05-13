@@ -2,15 +2,13 @@ package com.skypro.exam.controller;
 
 import com.skypro.exam.model.Question;
 import com.skypro.exam.service.ExaminerServiceImpl;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-
 @RestController
+@RequestMapping("/exam")
 public class ExamController {
 
     private ExaminerServiceImpl examinerServiceImpl;
@@ -20,7 +18,7 @@ public class ExamController {
     }
 
     @GetMapping("/get")
-    public Collection<Question> getQuestions(@RequestParam("amount") int amount) {
+    public Collection<Question> getQuestions(@RequestParam(name = "amount") int amount) {
         return examinerServiceImpl.getQuestions(amount);
     }
 }
